@@ -1,17 +1,16 @@
 {
   "expo": {
     "name": "Gakushido_app",
+
     "slug": "Gakushido_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "gakushidoapp",
     "userInterfaceStyle": "automatic",
-    "ios": {
-      "icon": "./assets/expo.icon"
-    },
     "android": {
       "adaptiveIcon": {
+        "package": "com.reo722.gakushidoapp",
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
@@ -19,9 +18,17 @@
       },
       "predictiveBackGestureEnabled": false
     },
+    "experiments": {
+      "typedRoutes": true
+    },
     "web": {
+      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
+    },
+    "ios": {
+      "bundleIdentifier": "com.reo722.gakushidoapp",
+      "icon": "./assets/expo.icon"
     },
     "plugins": [
       "expo-router",
@@ -34,7 +41,8 @@
             "imageWidth": 76
           }
         }
-      ]
+      ],
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true,
